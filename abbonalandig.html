@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abbona Ingeniería | Geotecnia, Cálculo Estructural y Laboratorio</title>
+  <meta name="description" content="Estudios de suelos, prospección sísmica, cálculo estructural y control de calidad de materiales en Córdoba y la región. Más de 5.000 proyectos ejecutados." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f4f8',
+              100: '#d9e2ec',
+              500: '#334e68',
+              600: '#243b53',
+              700: '#102a43',
+              800: '#0b1d3a',
+              900: '#061126',
+            },
+            accent: {
+              500: '#0284c7',
+              600: '#0369a1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <img src="Logo pagina.png" alt="Abbona Ingeniería Logo" class="h-12 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#perfil" class="hover:text-brand-700 transition">Perfil</a>
+        <a href="#servicios" class="hover:text-brand-700 transition">Especializaciones</a>
+        <a href="#sismica" class="hover:text-brand-700 transition">Prospección Sísmica</a>
+        <a href="#laboratorio" class="hover:text-brand-700 transition">Laboratorio</a>
+        <a href="#contacto" class="hover:text-brand-700 transition">Contacto</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/5493512820481?text=Hola,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20estudio%20de%20suelos" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition shadow-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 text-white py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent-500/20 text-sky-300 border border-accent-500/30 mb-6">
+          Ingeniería Geotécnica & Estructural
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+          Rigurosidad Técnica, Solidez y Responsabilidad Corporativa
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+          Más de 5.000 obras y proyectos nos respaldan en el desarrollo de estudios de suelos, cálculo estructural, prospección sísmica y ensayos de laboratorio normados en todo el país.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#contacto" class="inline-flex justify-center items-center px-6 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition">
+            Solicitar Cotización de Estudio
+          </a>
+          <a href="#laboratorio" class="inline-flex justify-center items-center px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 backdrop-blur transition">
+            Ver Catálogo de Ensayos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS BAR -->
+  <section class="bg-white border-b border-slate-200 py-10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+        <div class="p-3 bg-brand-100 text-brand-700 rounded-lg text-2xl font-bold">5K+</div>
+        <div>
+          <h3 class="font-bold text-slate-900">Proyectos Ejecutados</h3>
+          <p class="text-xs text-slate-500">Trayectoria consolidada a nivel regional</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+        <div class="p-3 bg-brand-100 text-brand-700 rounded-lg text-2xl font-bold">100%</div>
+        <div>
+          <h3 class="font-bold text-slate-900">Laboratorio Propio</h3>
+          <p class="text-xs text-slate-500">Equipamiento tecnológico de última generación</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100">
+        <div class="p-3 bg-brand-100 text-brand-700 rounded-lg text-2xl font-bold">NORMAS</div>
+        <div>
+          <h3 class="font-bold text-slate-900">ASTM • AASHTO • ISO</h3>
+          <p class="text-xs text-slate-500">Garantía de calidad y precisión en ensayos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIL INSTITUCIONAL -->
+  <section id="perfil" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-bold text-brand-900 mb-4">Perfil Institucional</h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+          Fundada por los ingenieros <strong>Pablo V. Abbona</strong> y <strong>Gustavo F. Abbona Giménez</strong>, Abbona Ingeniería brinda soluciones integrales de alta precisión técnica, seriedad y responsabilidad profesional. 
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Contamos con un laboratorio geotécnico propio equipado para realizar caracterizaciones mecánicas, físicas y químicas de suelos, hormigones y asfaltos, respondiendo a la demanda de proyectos viales, edificación en altura, complejos industriales y grandes obras de infraestructura.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ESPECIALIZACIÓN -->
+  <section id="servicios" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-brand-900 mb-3">Áreas de Especialización</h2>
+        <p class="text-slate-600">Servicios integrales diseñados para garantizar la estabilidad y optimización de sus obras.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">🏗️</div>
+          <h3 class="text-xl font-bold text-brand-900 mb-3">Geotecnia y Suelos</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Puentes y viaductos</li>
+            <li>• Edificios en altura</li>
+            <li>• Plantas industriales y presas</li>
+            <li>• Urbanizaciones integrales</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">📐</div>
+          <h3 class="text-xl font-bold text-brand-900 mb-3">Cálculo Estructural</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Hormigón armado y metálicas</li>
+            <li>• Fundaciones para maquinaria</li>
+            <li>• Estructuras prefabricadas</li>
+            <li>• Cálculo de torres y silos</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">🔬</div>
+          <h3 class="text-xl font-bold text-brand-900 mb-3">Control de Calidad</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Dosajes de hormigón</li>
+            <li>• Compactación de terraplenes</li>
+            <li>• Auditorías de materiales in situ</li>
+            <li>• Control de recepción en obra</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">⚡</div>
+          <h3 class="text-xl font-bold text-brand-900 mb-3">Geofísica Avanzada</h3>
+          <ul class="text-sm text-slate-600 space-y-2">
+            <li>• Prospección sísmica (Vs30)</li>
+            <li>• Caracterización dinámica</li>
+            <li>• Ensayos de penetración (DCP)</li>
+            <li>• Ensayos de plato de carga</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER PROSPECCIÓN SÍSMICA -->
+  <section id="sismica" class="py-16 bg-gradient-to-r from-brand-900 to-brand-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-8 lg:p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl">
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3 py-1 rounded-full mb-4 inline-block">
+            Novedad Tecnológica
+          </span>
+          <h2 class="text-3xl font-bold mb-4">Servicio de Prospección Sísmica</h2>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            Incorporamos tecnología de vanguardia para la determinación de perfiles de velocidad de ondas de corte (Vs30) y caracterización dinámica de suelos, fundamental para un diseño sismorresistente eficiente y optimizado.
+          </p>
+        </div>
+        <div>
+          <a href="#contacto" class="inline-flex justify-center items-center px-6 py-3.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition shadow-lg whitespace-nowrap">
+            Consultar por Prospección Sísmica
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LABORATORIO Y BUSCADOR INTERACTIVO DE ENSAYOS -->
+  <section id="laboratorio" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-brand-900 mb-3">Laboratorio Geotécnico Propio</h2>
+        <p class="text-slate-600">Busque directamente el ensayo o norma técnica requerida para su proyecto.</p>
+      </div>
+
+      <!-- Buscador Input -->
+      <div class="max-w-xl mx-auto mb-10">
+        <div class="relative">
+          <input type="text" id="searchInput" placeholder="Ej: Triaxial, CBR, ASTM D2487, Sulfatos, Rice..." class="w-full px-5 py-4 pl-12 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-sm text-slate-800 placeholder-slate-400" onkeyup="filterTests()" />
+          <svg class="w-5 h-5 text-slate-400 absolute left-4 top-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+      </div>
+
+      <!-- Tabla de Ensayos -->
+      <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse" id="testsTable">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider border-b border-slate-200">
+                <th class="py-4 px-6">Ensayo / Parámetro</th>
+                <th class="py-4 px-6">Categoría</th>
+                <th class="py-4 px-6">Normativa de Referencia</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-sm">
+              <!-- Mecánica de Suelos -->
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Compresión Confinada Simple</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D2435 / AASHTO T 216</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Compresión Confinada Doble</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D5333</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Compresión Triaxial (UU, CU, CD)</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D2850 / ASTM D4767 / AASHTO T 296</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Permeabilidad en Cámara Triaxial</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D5084</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Proctor T99 - T180</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 99 / T 180 (ASTM D698/D1557)</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">CBR (2 y 6 probetas)</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 193 / ASTM D1883</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Densidad "in situ" (Cono de arena)</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 191 / ASTM D1556</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Ensayo de Plato de Carga</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D1194 / DIN 18134 / AASHTO T 222</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">DCP (Penetrómetro Dinámico de Cono)</td><td class="py-3.5 px-6 text-slate-500">Mecánica de Suelos</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D6951</td></tr>
+
+              <!-- Caracterización Física -->
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Granulometría Completa</td><td class="py-3.5 px-6 text-slate-500">Física y Clasificación</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 27 / T 11 / ASTM C136</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Plasticidad (Límites Líquido y Plástico)</td><td class="py-3.5 px-6 text-slate-500">Física y Clasificación</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 89 / T 90 / ASTM D4318</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Identificación y Clasificación de Suelos</td><td class="py-3.5 px-6 text-slate-500">Física y Clasificación</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D2487 (USCS) / AASHTO M 145</td></tr>
+
+              <!-- Hormigón y Asfalto -->
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Compresión de Probetas de Hormigón</td><td class="py-3.5 px-6 text-slate-500">Hormigón / Asfalto</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM C39 / AASHTO T 22</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Ensayo Rice sobre Probeta de Asfalto</td><td class="py-3.5 px-6 text-slate-500">Hormigón / Asfalto</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 209 / ASTM D2041</td></tr>
+
+              <!-- Química -->
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">pH, Cloruros (Cl-) y Sulfatos (SO42-)</td><td class="py-3.5 px-6 text-slate-500">Análisis Químico</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">ASTM D2488 / ASTM D516 / ISO 22719</td></tr>
+              <tr class="test-row"><td class="py-3.5 px-6 font-semibold text-slate-900">Sales Solubles y Conductividad Eléctrica</td><td class="py-3.5 px-6 text-slate-500">Análisis Químico</td><td class="py-3.5 px-6 font-mono text-xs text-brand-700">AASHTO T 291 / ISO 7888 / ASTM D1125</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Info -->
+        <div>
+          <h2 class="text-3xl font-bold text-brand-900 mb-6">Contáctenos</h2>
+          <p class="text-slate-600 mb-8 leading-relaxed">
+            Estamos a su disposición para coordinar estudios de suelos, ensayos de laboratorio o asesoramiento estructural en todo el país.
+          </p>
+
+          <div class="space-y-4 text-slate-700">
+            <div class="flex items-start gap-4">
+              <span class="text-xl">📍</span>
+              <div>
+                <strong>Dirección:</strong><br>
+                Elpidio González 2456 - B° Parque Vélez Sarsfield, Córdoba, Argentina.
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-xl">📧</span>
+              <div>
+                <strong>Correo Electrónico:</strong><br>
+                abbonaingenieria@gmail.com
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="text-xl">📞</span>
+              <div>
+                <strong>Teléfonos de Contacto:</strong><br>
+                351 282 0481 / 351 353 0418
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct WhatsApp Form Box -->
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+          <h3 class="text-xl font-bold text-brand-900 mb-4">Enviar Consulta Rápida</h3>
+          <form onsubmit="sendWhatsApp(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre / Empresa</label>
+              <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none text-sm" placeholder="Ej: Arq. Juan Pérez / Constructora X">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Tipo de Servicio Requerido</label>
+              <select id="service" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none text-sm">
+                <option>Estudio de Suelos</option>
+                <option>Prospección Sísmica</option>
+                <option>Cálculo Estructural</option>
+                <option>Ensayo de Laboratorio Especifico</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ubicación del Proyecto / Detalle</label>
+              <textarea id="message" rows="3" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 outline-none text-sm" placeholder="Ubicación de la obra y detalles principales..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition shadow">
+              Enviar Consulta por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-900 text-slate-400 py-8 border-t border-brand-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© Abbona Ingeniería. Todos los derechos reservados.</p>
+      <p>Córdoba, Argentina</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT BUSCADOR & WHATSAPP -->
+  <script>
+    function filterTests() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const rows = document.querySelectorAll('#testsTable .test-row');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(input) ? '' : 'none';
+      });
+    }
+
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+      const text = `Hola, mi nombre es ${name}. Quisiera consultar por ${service}. Detalle: ${message}`;
+      window.open(`https://wa.me/5493512820481?text=${encodeURIComponent(text)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
