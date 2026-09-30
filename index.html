@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="styles.css">
   
   <script>
     tailwind.config = {
@@ -43,7 +45,7 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 header-shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Logo -->
       <a href="#" class="flex items-center gap-3">
@@ -52,11 +54,12 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="#perfil" class="hover:text-brand-700 transition">Perfil</a>
-        <a href="#servicios" class="hover:text-brand-700 transition">Especializaciones</a>
-        <a href="#sismica" class="hover:text-brand-700 transition">Prospección Sísmica</a>
-        <a href="#laboratorio" class="hover:text-brand-700 transition">Laboratorio</a>
-        <a href="#contacto" class="hover:text-brand-700 transition">Contacto</a>
+        <a href="#perfil" class="nav-link hover:text-brand-700 transition">Perfil</a>
+        <a href="#servicios" class="nav-link hover:text-brand-700 transition">Especializaciones</a>
+        <a href="#trabajos" class="nav-link hover:text-brand-700 transition">Trabajos</a>
+        <a href="#sismica" class="nav-link hover:text-brand-700 transition">Prospección Sísmica</a>
+        <a href="#laboratorio" class="nav-link hover:text-brand-700 transition">Laboratorio</a>
+        <a href="#contacto" class="nav-link hover:text-brand-700 transition">Contacto</a>
       </nav>
 
       <!-- CTA Button -->
@@ -71,7 +74,7 @@
 
   <!-- HERO SECTION -->
   <section class="relative bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 text-white py-20 lg:py-28 overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="absolute inset-0 hero-pattern"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent-500/20 text-sky-300 border border-accent-500/30 mb-6">
@@ -148,7 +151,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Card 1 -->
-        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 card-hover">
           <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">🏗️</div>
           <h3 class="text-xl font-bold text-brand-900 mb-3">Geotecnia y Suelos</h3>
           <ul class="text-sm text-slate-600 space-y-2">
@@ -160,7 +163,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 card-hover">
           <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">📐</div>
           <h3 class="text-xl font-bold text-brand-900 mb-3">Cálculo Estructural</h3>
           <ul class="text-sm text-slate-600 space-y-2">
@@ -172,7 +175,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 card-hover">
           <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">🔬</div>
           <h3 class="text-xl font-bold text-brand-900 mb-3">Control de Calidad</h3>
           <ul class="text-sm text-slate-600 space-y-2">
@@ -184,7 +187,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition">
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 card-hover">
           <div class="w-12 h-12 bg-brand-700 text-white rounded-xl flex items-center justify-center font-bold mb-6 text-xl">⚡</div>
           <h3 class="text-xl font-bold text-brand-900 mb-3">Geofísica Avanzada</h3>
           <ul class="text-sm text-slate-600 space-y-2">
@@ -198,10 +201,24 @@
     </div>
   </section>
 
+  <!-- TRABAJOS REALIZADOS -->
+  <section id="trabajos" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-brand-900 mb-3">Trabajos Realizados</h2>
+        <p class="text-slate-600">Una selección de proyectos que respaldan nuestra trayectoria y compromiso con la excelencia técnica.</p>
+      </div>
+
+      <div id="proyectos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Las cards se cargan dinámicamente desde proyectos.json -->
+      </div>
+    </div>
+  </section>
+
   <!-- BANNER PROSPECCIÓN SÍSMICA -->
   <section id="sismica" class="py-16 bg-gradient-to-r from-brand-900 to-brand-800 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="p-8 lg:p-12 rounded-3xl bg-white/5 border border-white/10 backdrop-blur flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="p-8 lg:p-12 rounded-3xl glass-effect flex flex-col lg:flex-row items-center justify-between gap-8">
         <div class="max-w-2xl">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3 py-1 rounded-full mb-4 inline-block">
             Novedad Tecnológica
@@ -353,25 +370,7 @@
     </div>
   </footer>
 
-  <!-- SCRIPT BUSCADOR & WHATSAPP -->
-  <script>
-    function filterTests() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const rows = document.querySelectorAll('#testsTable .test-row');
-      rows.forEach(row => {
-        const text = row.innerText.toLowerCase();
-        row.style.display = text.includes(input) ? '' : 'none';
-      });
-    }
-
-    function sendWhatsApp(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const service = document.getElementById('service').value;
-      const message = document.getElementById('message').value;
-      const text = `Hola, mi nombre es ${name}. Quisiera consultar por ${service}. Detalle: ${message}`;
-      window.open(`https://wa.me/5493512820481?text=${encodeURIComponent(text)}`, '_blank');
-    }
-  </script>
+  <!-- SCRIPT PERSONALIZADO -->
+  <script src="script.js"></script>
 </body>
 </html>

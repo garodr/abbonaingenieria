@@ -1,0 +1,84 @@
+{
+  "proyectos": [
+    {
+      "id": "antartida",
+      "nombre": "Base Petrel - Antártida",
+      "categoria": "Geotecnia",
+      "ubicacion": "Antártida",
+      "descripcion": "En esta obra se realizo el Estudio de Suelos donde se construye actualmente la Base Petrel. También se ejecuto ensayos de traccion y platos de carga.",
+      "imagenes": [
+        "imagenes/proyectos/Antartida/Antartida01.jpg",
+        "imagenes/proyectos/Antartida/Antartida02.jpg",
+        "imagenes/proyectos/Antartida/Antartida03.jpg",
+        "imagenes/proyectos/Antartida/Antartida04.jpg",
+        "imagenes/proyectos/Antartida/Antartida05.jpg"
+      ]
+    },
+    {
+      "id": "autovia-punilla",
+      "nombre": "Autopista Punilla",
+      "categoria": "Geotecnia",
+      "ubicacion": "Punilla",
+      "descripcion": "En esta obra se realizo ensayos de platos de carga.",
+      "imagenes": [
+        "imagenes/proyectos/AutoviaPunilla/AutoviaPunilla01.jpeg",
+        "imagenes/proyectos/AutoviaPunilla/AutoviaPunilla02.jpeg",
+        "imagenes/proyectos/AutoviaPunilla/AutoviaPunilla03.jpeg"
+      ]
+    },
+    {
+      "id": "ensayos",
+      "nombre": "Ensayos de Laboratorio",
+      "categoria": "Laboratorio",
+      "ubicacion": "Córdoba",
+      "descripcion": "Ensayos realizados sobre muestras aportadas por nuestros clientes.",
+      "imagenes": [
+        "imagenes/proyectos/Ensayos/WhatsApp Image 2026-09-30 at 13.38.01.jpeg",
+        "imagenes/proyectos/Ensayos/WhatsApp Image 2026-09-30 at 13.38.02.jpeg",
+        "imagenes/proyectos/Ensayos/WhatsApp Image 2026-09-30 at 13.38.03.jpeg",
+        "imagenes/proyectos/Ensayos/WhatsApp Image 2026-09-30 at 13.38.03 (1).jpeg",
+        "imagenes/proyectos/Ensayos/WhatsApp Image 2026-09-30 at 13.38.03 (2).jpeg",
+        "imagenes/proyectos/Ensayos/WhatsApp Image 2026-09-30 at 13.38.03 (3).jpeg"
+      ]
+    },
+    {
+      "id": "hospital-villa-allende",
+      "nombre": "Hospital Villa Allende",
+      "categoria": "Estructural",
+      "ubicacion": "Villa Allende",
+      "descripcion": "En esta obra se realizo el Calculo de la estructura del nuevo Hospital de Villa Allende.",
+      "imagenes": [
+        "imagenes/proyectos/HospitalVillaAllende/Hospital01.jpeg",
+        "imagenes/proyectos/HospitalVillaAllende/Hospital02.jpeg"
+      ]
+    },
+    {
+      "id": "parque-solar",
+      "nombre": "Parque Solar Las Lomas",
+      "categoria": "Geotecnia",
+      "ubicacion": "Córdoba",
+      "descripcion": "En esta obra se realizo el Estudio de Suelos para la implementacion del parque solar Las Lomas.",
+      "imagenes": [
+        "imagenes/proyectos/ParqueSolar/ParqueSolar01.jpg",
+        "imagenes/proyectos/ParqueSolar/ParqueSolar02.jpg",
+        "imagenes/proyectos/ParqueSolar/ParqueSolar03.jpg",
+        "imagenes/proyectos/ParqueSolar/ParqueSolar04.jpg",
+        "imagenes/proyectos/ParqueSolar/ParqueSolar05.jpg",
+        "imagenes/proyectos/ParqueSolar/ParqueSolar06.jpg",
+        "imagenes/proyectos/ParqueSolar/ParqueSolar07.jpg"
+      ]
+    },
+    {
+      "id": "plato-carga-silos",
+      "nombre": "Plato de Carga - Silos AGD",
+      "categoria": "Geotecnia",
+      "ubicacion": "Córdoba",
+      "descripcion": "En esta obra se ensayos de plato de carga para los ingreso a los silos de cereeales de AGD.",
+      "imagenes": [
+        "imagenes/proyectos/PlatodeCargaSilos/PlatodeCarga01.jpeg",
+        "imagenes/proyectos/PlatodeCargaSilos/PlatodeCarga02.jpeg",
+        "imagenes/proyectos/PlatodeCargaSilos/PlatodeCarga03.jpeg"
+      ]
+    }
+  ]
+}

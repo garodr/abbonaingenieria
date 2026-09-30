@@ -1,0 +1,1 @@
+En esta obra se realizo el Estudio de Suelos para la implementacion del parque solar Las Lomas

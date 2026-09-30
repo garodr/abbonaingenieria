@@ -1,0 +1,107 @@
+name: Generar Proyectos JSON
+
+on:
+  push:
+    paths:
+      - 'imagenes/proyectos/**'
+      - '.github/workflows/generar-proyectos.yml'
+  workflow_dispatch: # Permite ejecución manual
+
+jobs:
+  generar-json:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+      
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Generar proyectos.json
+        run: |
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+          
+          const proyectosDir = 'imagenes/proyectos';
+          const proyectos = [];
+          
+          // Leer todas las carpetas de proyectos
+          const carpetas = fs.readdirSync(proyectosDir, { withFileTypes: true })
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => dirent.name);
+          
+          carpetas.forEach(carpeta => {
+            const carpetaPath = path.join(proyectosDir, carpeta);
+            
+            // Leer archivos de la carpeta
+            const archivos = fs.readdirSync(carpetaPath);
+            
+            // Filtrar imágenes (jpg, jpeg, png, webp)
+            const imagenes = archivos
+              .filter(archivo => /\.(jpg|jpeg|png|webp)$/i.test(archivo))
+              .map(archivo => \`imagenes/proyectos/\${carpeta}/\${archivo}\`);
+            
+            // Leer descripción del archivo .md
+            let descripcion = '';
+            const descFile = archivos.find(f => f.toLowerCase() === 'descripcion.md');
+            if (descFile) {
+              descripcion = fs.readFileSync(path.join(carpetaPath, descFile), 'utf-8').trim();
+            }
+            
+            // Determinar categoría basada en el nombre de la carpeta
+            let categoria = 'Geotecnia';
+            const carpetaLower = carpeta.toLowerCase();
+            if (carpetaLower.includes('hospital') || carpetaLower.includes('estructura')) {
+              categoria = 'Estructural';
+            } else if (carpetaLower.includes('ensayo') || carpetaLower.includes('laboratorio')) {
+              categoria = 'Laboratorio';
+            } else if (carpetaLower.includes('solar') || carpetaLower.includes('parque')) {
+              categoria = 'Geofísica';
+            }
+            
+            // Determinar ubicación
+            let ubicacion = 'Córdoba';
+            if (carpetaLower.includes('antartida')) {
+              ubicacion = 'Antártida';
+            } else if (carpetaLower.includes('punilla')) {
+              ubicacion = 'Punilla';
+            } else if (carpetaLower.includes('villa')) {
+              ubicacion = 'Villa Allende';
+            }
+            
+            // Nombre del proyecto (formateado)
+            const nombre = carpeta
+              .replace(/([A-Z])/g, ' \$1')
+              .replace(/^./, str => str.toUpperCase())
+              .trim();
+            
+            proyectos.push({
+              id: carpeta.toLowerCase().replace(/\s+/g, '-'),
+              nombre: nombre,
+              categoria: categoria,
+              ubicacion: ubicacion,
+              descripcion: descripcion,
+              imagenes: imagenes
+            });
+          });
+          
+          // Ordenar proyectos alfabéticamente
+          proyectos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+          
+          // Escribir el JSON
+          const json = { proyectos: proyectos };
+          fs.writeFileSync('proyectos.json', JSON.stringify(json, null, 2));
+          console.log('✅ proyectos.json generado con ' + proyectos.length + ' proyectos');
+          "
+      
+      - name: Commit y push del JSON generado
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add proyectos.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "🔄 Actualizar proyectos.json automáticamente"
+          git push
