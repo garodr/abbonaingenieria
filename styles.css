@@ -128,3 +128,49 @@ textarea:focus-visible {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Modal Lightbox */
+#imageModal {
+  animation: fadeIn 0.3s ease;
+}
+
+#imageModal.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#modalImage {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Cursor de zoom para las cards de proyectos */
+.proyecto-card {
+  cursor: pointer;
+}
+
+.proyecto-card img {
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover img {
+  transform: scale(1.05);
+}
